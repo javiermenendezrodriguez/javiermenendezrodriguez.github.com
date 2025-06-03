@@ -1,1 +1,199 @@
-Hola mundo!!
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para animaciones suaves en los enlaces de navegación */
+        nav a {
+            transition: color 0.3s ease;
+        }
+        /* Estilo para las tarjetas de proyecto */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Animación sutil para la imagen de perfil */
+        .profile-image {
+            transition: transform 0.5s ease-in-out;
+        }
+        .profile-image:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-slate-800 text-white p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <a href="#" class="text-2xl font-bold hover:text-sky-400">Mi Nombre</a>
+            <button id="nav-toggle" class="md:hidden block text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div id="nav-content" class="hidden md:flex md:items-center md:space-x-6 w-full md:w-auto">
+                <a href="#about" class="block mt-4 md:inline-block md:mt-0 hover:text-sky-300">Sobre Mí</a>
+                <a href="#projects" class="block mt-4 md:inline-block md:mt-0 hover:text-sky-300">Proyectos</a>
+                <a href="#contact" class="block mt-4 md:inline-block md:mt-0 hover:text-sky-300">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-slate-700 to-sky-600 text-white py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <img src="https://placehold.co/150x150/FFFFFF/333333?text=Yo" alt="Imagen de perfil" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 shadow-lg border-4 border-white profile-image">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">¡Hola! Soy [Tu Nombre]</h1>
+            <p class="text-lg md:text-xl mb-8">Desarrollador Web | Entusiasta de la Tecnología | Aprendiz Continuo</p>
+            <a href="#contact" class="bg-white text-slate-800 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition duration-300">Contáctame</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-700">Sobre Mí</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/3 md:pr-8 mb-8 md:mb-0">
+                    <p class="text-lg mb-4 leading-relaxed">
+                        ¡Bienvenido/a a mi rincón en la web! Soy un apasionado/a por [tu área de interés principal, ej: el desarrollo de software, el diseño UX/UI, la inteligencia artificial]. Me encanta crear soluciones innovadoras y aprender nuevas tecnologías.
+                    </p>
+                    <p class="text-lg mb-4 leading-relaxed">
+                        Tengo experiencia en [menciona algunas tecnologías o habilidades clave, ej: JavaScript, Python, React, Node.js, Figma]. Disfruto trabajando en proyectos desafiantes que me permitan crecer tanto personal como profesionalmente.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        En mi tiempo libre, me gusta [menciona algunos hobbies o intereses, ej: leer sobre las últimas tendencias tecnológicas, contribuir a proyectos de código abierto, practicar senderismo].
+                    </p>
+                </div>
+                <div class="md:w-1/3 text-center">
+                     <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=Hobby" alt="Ilustración sobre mí" class="rounded-lg shadow-md mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-700">Mis Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 project-card">
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Proyecto+1" alt="Imagen del Proyecto 1" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-sky-600">Nombre del Proyecto 1</h3>
+                    <p class="text-gray-600 mb-4">
+                        Una breve descripción de tu proyecto. ¿Qué problema resuelve? ¿Qué tecnologías usaste?
+                    </p>
+                    <a href="#" class="text-slate-700 font-semibold hover:text-sky-500 transition duration-300">Ver Proyecto &rarr;</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 project-card">
+                    <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Proyecto+2" alt="Imagen del Proyecto 2" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-sky-600">Nombre del Proyecto 2</h3>
+                    <p class="text-gray-600 mb-4">
+                        Describe otro de tus proyectos. Destaca tus contribuciones y los resultados obtenidos.
+                    </p>
+                    <a href="#" class="text-slate-700 font-semibold hover:text-sky-500 transition duration-300">Ver Código Fuente &rarr;</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 project-card">
+                    <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Proyecto+3" alt="Imagen del Proyecto 3" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold mb-2 text-sky-600">Próximo Proyecto Increíble</h3>
+                    <p class="text-gray-600 mb-4">
+                        Espacio reservado para futuras ideas y desarrollos. ¡Mantente atento/a!
+                    </p>
+                    <a href="#" class="text-slate-700 font-semibold hover:text-sky-500 transition duration-300">Más Detalles Próximamente &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold mb-8 text-slate-700">Ponte en Contacto</h2>
+            <p class="text-lg mb-8 leading-relaxed">
+                ¿Tienes alguna pregunta, propuesta o simplemente quieres saludar? No dudes en escribirme. ¡Me encantaría saber de ti!
+            </p>
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 text-left">Nombre Completo</label>
+                    <input type="text" name="name" id="name" autocomplete="name" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 text-left">Correo Electrónico</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 text-left">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required
+                              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></textarea>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition duration-300">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+            <div class="mt-12">
+                <p class="text-lg mb-4">También puedes encontrarme en:</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-sky-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.201 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-sky-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-white text-center p-6">
+        <p>&copy; <span id="currentYear"></span> [Tu Nombre]. Todos los derechos reservados.</p>
+        <p>Construido con <span class="text-red-500">&hearts;</span> y Tailwind CSS.</p>
+    </footer>
+
+    <script>
+        // Script para el menú hamburguesa en móviles
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+
+        if (navToggle && navContent) {
+            navToggle.addEventListener('click', function() {
+                navContent.classList.toggle('hidden');
+            });
+        }
+
+        // Script para el año actual en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script para el desplazamiento suave (opcional, pero mejora la experiencia)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
